@@ -54,4 +54,6 @@ See NedisClientBuilder for more parameters, and send command by client follow th
  
 The framework also support key sharding, If your system have several server instance and want to distribute keys to all servers evenly, the ShardedNedis will help you, see ShardedNedis for more details.
 
-The nedis support most redis commands, the left commands will be support in the next version.
+The nedis support most redis commands, the other commands will be supported in the next version.
+
+JDK 7 required.

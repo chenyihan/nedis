@@ -12,8 +12,8 @@ import org.cyy.fw.nedis.util.NedisException;
 
 public class ProtocolDecoder extends ReplayingDecoder<Void> {
 
-	private static final Logger LOGGER = Logger.getLogger(NedisClient.class
-			.getName());
+	private static final Logger LOGGER = Logger.getLogger(ProtocolDecoder.class
+			.getSimpleName());
 
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in,

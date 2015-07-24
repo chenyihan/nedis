@@ -475,11 +475,10 @@ public class ShardedNedis implements ClientConfig<ShardedNedis> {
 	}
 
 	public void rPushX(ResponseCallback<ShardedResponse<Long>> respCallBack,
-			String key, String value, String... moreValues) {
+			String key, String value) {
 		ServerNode serverNode = nodeSharder.getShardNodeInfo(key);
 		getClient(serverNode).rPushX(
-				wrapShardedCallBack(respCallBack, serverNode), key, value,
-				moreValues);
+				wrapShardedCallBack(respCallBack, serverNode), key, value);
 	}
 
 	public void rPop(ResponseCallback<ShardedResponse<String>> respCallBack,

@@ -111,7 +111,7 @@ import org.cyy.fw.nedis.util.TextEncoder;
 public class NedisClient implements ClientConfig<NedisClient> {
 
 	private static final Logger LOGGER = Logger.getLogger(NedisClient.class
-			.getName());
+			.getSimpleName());
 	private ServerNode server;
 	private int connectTimeoutMills;
 	private int eventLoopGroupSize;
@@ -1078,9 +1078,9 @@ public class NedisClient implements ClientConfig<NedisClient> {
 	}
 
 	public void rPushX(ResponseCallback<Long> respCallBack, String key,
-			String value, String... moreValues) {
-		String[] args = CmdArgumentTool.combineArgs(
-				new String[] { key, value }, moreValues);
+			String value) {
+		String[] args = CmdArgumentTool
+				.combineArgs(new String[] { key, value });
 		sendCommandWithLongResponseAdapter(RedisCommand.RPUSHX, respCallBack,
 				args);
 	}

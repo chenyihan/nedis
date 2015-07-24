@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class ResponseReceiver extends SimpleChannelInboundHandler<Object> {
 
 	private static final Logger LOGGER = Logger
-			.getLogger(ResponseReceiver.class.getName());
+			.getLogger(ResponseReceiver.class.getSimpleName());
 
 	private ConnectionPool connectionPool;
 

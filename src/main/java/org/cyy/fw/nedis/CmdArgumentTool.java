@@ -1,8 +1,8 @@
 package org.cyy.fw.nedis;
 
 public final class CmdArgumentTool {
-	public static String[] combineArgs(String key, String... value) {
-		return combineArgs(new String[] { key }, value);
+	public static String[] combineArgs(String args1, String... args2) {
+		return combineArgs(new String[] { args1 }, args2);
 	}
 
 	public static String[] combineArgs(String[] args1, String... args2) {
